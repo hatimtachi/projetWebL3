@@ -1,0 +1,16 @@
+<div class="row">
+    <ul class="chauss">
+      <div class="col-md-5 " *ngFor="let od of chauss"
+        [class.selected]="od === selectOrdi"
+        (click)="onSelect(od)">
+        <button class="thumbnail">
+          <img src={{od.img_profil}}>
+          <a><h3>{{od.nom}}</h3></a>
+          <p>{{od.info}}</p>
+          <h6 class="alert alert-warning">{{od.prix}} <span class="glyphicon glyphicon-euro"></span></h6>
+          <hr/>
+        </button>
+    </div>
+  </ul>
+</div>
+<app-inforamtique-produit-detail [ordi]="selectOrdi"></app-inforamtique-produit-detail>

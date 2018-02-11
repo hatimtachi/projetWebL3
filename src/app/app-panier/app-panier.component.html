@@ -1,0 +1,14 @@
+<div class="row">
+      <ul class="panier">
+            <div class="col-sm-6 col-md-4" *ngFor="let pn of panier" (click)="onSelect(pn)">
+                  <div class="thumbnail">
+                        <img src={{pn.img_profil}}>
+                        <div class="caption">
+                              <a><h3>{{pn.nom}}</h3></a>
+                              <p>{{pn.img3}}<span class="glyphicon glyphicon-eur"></span></p>
+                              <button class="btn btn-primary" (click)="deleteProduit(pn.id)" >enlever du panier</button>
+                        </div>
+                  </div>
+            </div>
+      </ul>
+</div>
